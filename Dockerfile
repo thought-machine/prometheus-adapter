@@ -1,7 +1,7 @@
 ARG ARCH
 ARG GO_VERSION
 
-FROM golang:${GO_VERSION} as build
+FROM golang:${GO_VERSION} AS build
 
 WORKDIR /go/src/github.com/thought-machine/prometheus-adapter
 COPY go.mod .
