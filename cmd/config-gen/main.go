@@ -8,7 +8,7 @@ import (
 	"github.com/spf13/cobra"
 	yaml "gopkg.in/yaml.v2"
 
-	"sigs.k8s.io/prometheus-adapter/cmd/config-gen/utils"
+	"github.com/thought-machine/prometheus-adapter/cmd/config-gen/utils"
 )
 
 func main() {

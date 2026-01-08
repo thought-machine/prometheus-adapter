@@ -1,4 +1,4 @@
-module sigs.k8s.io/prometheus-adapter
+module github.com/thought-machine/prometheus-adapter
 
 go 1.25.0
 

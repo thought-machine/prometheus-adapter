@@ -43,14 +43,14 @@ import (
 	"sigs.k8s.io/custom-metrics-apiserver/pkg/provider"
 	"sigs.k8s.io/metrics-server/pkg/api"
 
-	generatedopenapi "sigs.k8s.io/prometheus-adapter/pkg/api/generated/openapi"
-	prom "sigs.k8s.io/prometheus-adapter/pkg/client"
-	mprom "sigs.k8s.io/prometheus-adapter/pkg/client/metrics"
-	adaptercfg "sigs.k8s.io/prometheus-adapter/pkg/config"
-	cmprov "sigs.k8s.io/prometheus-adapter/pkg/custom-provider"
-	extprov "sigs.k8s.io/prometheus-adapter/pkg/external-provider"
-	"sigs.k8s.io/prometheus-adapter/pkg/naming"
-	resprov "sigs.k8s.io/prometheus-adapter/pkg/resourceprovider"
+	generatedopenapi "github.com/thought-machine/prometheus-adapter/pkg/api/generated/openapi"
+	prom "github.com/thought-machine/prometheus-adapter/pkg/client"
+	mprom "github.com/thought-machine/prometheus-adapter/pkg/client/metrics"
+	adaptercfg "github.com/thought-machine/prometheus-adapter/pkg/config"
+	cmprov "github.com/thought-machine/prometheus-adapter/pkg/custom-provider"
+	extprov "github.com/thought-machine/prometheus-adapter/pkg/external-provider"
+	"github.com/thought-machine/prometheus-adapter/pkg/naming"
+	resprov "github.com/thought-machine/prometheus-adapter/pkg/resourceprovider"
 )
 
 type PrometheusAdapter struct {

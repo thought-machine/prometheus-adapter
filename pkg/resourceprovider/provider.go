@@ -34,9 +34,9 @@ import (
 
 	"sigs.k8s.io/metrics-server/pkg/api"
 
-	"sigs.k8s.io/prometheus-adapter/pkg/client"
-	"sigs.k8s.io/prometheus-adapter/pkg/config"
-	"sigs.k8s.io/prometheus-adapter/pkg/naming"
+	"github.com/thought-machine/prometheus-adapter/pkg/client"
+	"github.com/thought-machine/prometheus-adapter/pkg/config"
+	"github.com/thought-machine/prometheus-adapter/pkg/naming"
 
 	pmodel "github.com/prometheus/common/model"
 )

@@ -3,7 +3,7 @@ ARG GO_VERSION
 
 FROM golang:${GO_VERSION} as build
 
-WORKDIR /go/src/sigs.k8s.io/prometheus-adapter
+WORKDIR /go/src/github.com/thought-machine/prometheus-adapter
 COPY go.mod .
 COPY go.sum .
 RUN go mod download
@@ -17,6 +17,6 @@ RUN make prometheus-adapter
 
 FROM gcr.io/distroless/static:latest-$ARCH
 
-COPY --from=build /go/src/sigs.k8s.io/prometheus-adapter/adapter /
+COPY --from=build /go/src/github.com/thought-machine/prometheus-adapter/adapter /
 USER 65534
 ENTRYPOINT ["/adapter"]

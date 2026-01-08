@@ -6,8 +6,8 @@ import (
 
 	pmodel "github.com/prometheus/common/model"
 
-	prom "sigs.k8s.io/prometheus-adapter/pkg/client"
-	"sigs.k8s.io/prometheus-adapter/pkg/config"
+	prom "github.com/thought-machine/prometheus-adapter/pkg/client"
+	"github.com/thought-machine/prometheus-adapter/pkg/config"
 )
 
 // DefaultConfig returns a configuration equivalent to the former

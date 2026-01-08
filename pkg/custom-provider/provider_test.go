@@ -28,10 +28,10 @@ import (
 
 	"sigs.k8s.io/custom-metrics-apiserver/pkg/provider"
 
-	config "sigs.k8s.io/prometheus-adapter/cmd/config-gen/utils"
-	prom "sigs.k8s.io/prometheus-adapter/pkg/client"
-	fakeprom "sigs.k8s.io/prometheus-adapter/pkg/client/fake"
-	"sigs.k8s.io/prometheus-adapter/pkg/naming"
+	config "github.com/thought-machine/prometheus-adapter/cmd/config-gen/utils"
+	prom "github.com/thought-machine/prometheus-adapter/pkg/client"
+	fakeprom "github.com/thought-machine/prometheus-adapter/pkg/client/fake"
+	"github.com/thought-machine/prometheus-adapter/pkg/naming"
 )
 
 const fakeProviderUpdateInterval = 2 * time.Second

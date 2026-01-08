@@ -25,7 +25,7 @@ import (
 
 	"sigs.k8s.io/custom-metrics-apiserver/pkg/provider"
 
-	prom "sigs.k8s.io/prometheus-adapter/pkg/client"
+	prom "github.com/thought-machine/prometheus-adapter/pkg/client"
 )
 
 // MetricConverter provides a unified interface for converting the results of
