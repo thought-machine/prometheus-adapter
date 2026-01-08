@@ -23,8 +23,8 @@ import (
 
 	"k8s.io/klog/v2"
 
-	prom "sigs.k8s.io/prometheus-adapter/pkg/client"
-	"sigs.k8s.io/prometheus-adapter/pkg/naming"
+	prom "github.com/thought-machine/prometheus-adapter/pkg/client"
+	"github.com/thought-machine/prometheus-adapter/pkg/naming"
 
 	pmodel "github.com/prometheus/common/model"
 )

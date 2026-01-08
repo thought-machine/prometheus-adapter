@@ -129,6 +129,6 @@ find "${E2E_DIR}/manifests" -type f -exec sed -i -e "s|namespace: monitoring|nam
 # Deploy prometheus-adapter
 kubectl apply -f "${E2E_DIR}/manifests" --server-side
 
-PROJECT_PREFIX="sigs.k8s.io/prometheus-adapter"
+PROJECT_PREFIX="github.com/thought-machine/prometheus-adapter"
 export KUBECONFIG
 go test "${PROJECT_PREFIX}/test/e2e/" -v -count=1

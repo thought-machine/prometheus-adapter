@@ -28,7 +28,7 @@ import (
 	"k8s.io/component-base/metrics"
 	"k8s.io/component-base/metrics/legacyregistry"
 
-	"sigs.k8s.io/prometheus-adapter/pkg/client"
+	"github.com/thought-machine/prometheus-adapter/pkg/client"
 )
 
 var (

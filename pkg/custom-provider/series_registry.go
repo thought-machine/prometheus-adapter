@@ -28,8 +28,8 @@ import (
 
 	"sigs.k8s.io/custom-metrics-apiserver/pkg/provider"
 
-	prom "sigs.k8s.io/prometheus-adapter/pkg/client"
-	"sigs.k8s.io/prometheus-adapter/pkg/naming"
+	prom "github.com/thought-machine/prometheus-adapter/pkg/client"
+	"github.com/thought-machine/prometheus-adapter/pkg/naming"
 )
 
 // NB: container metrics sourced from cAdvisor don't consistently follow naming conventions,

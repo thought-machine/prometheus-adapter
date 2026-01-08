@@ -31,7 +31,7 @@ linters:
 
 linters-settings:
   goimports:
-    local-prefixes: sigs.k8s.io/prometheus-adapter
+    local-prefixes: github.com/thought-machine/prometheus-adapter
   revive:
     rules:
       - name: exported

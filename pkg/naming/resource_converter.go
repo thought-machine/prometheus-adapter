@@ -31,8 +31,8 @@ import (
 
 	"sigs.k8s.io/custom-metrics-apiserver/pkg/provider"
 
-	prom "sigs.k8s.io/prometheus-adapter/pkg/client"
-	"sigs.k8s.io/prometheus-adapter/pkg/config"
+	prom "github.com/thought-machine/prometheus-adapter/pkg/client"
+	"github.com/thought-machine/prometheus-adapter/pkg/config"
 )
 
 var (

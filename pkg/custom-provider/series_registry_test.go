@@ -34,9 +34,9 @@ import (
 
 	"sigs.k8s.io/custom-metrics-apiserver/pkg/provider"
 
-	config "sigs.k8s.io/prometheus-adapter/cmd/config-gen/utils"
-	prom "sigs.k8s.io/prometheus-adapter/pkg/client"
-	"sigs.k8s.io/prometheus-adapter/pkg/naming"
+	config "github.com/thought-machine/prometheus-adapter/cmd/config-gen/utils"
+	prom "github.com/thought-machine/prometheus-adapter/pkg/client"
+	"github.com/thought-machine/prometheus-adapter/pkg/naming"
 )
 
 // restMapper creates a RESTMapper with just the types we need for

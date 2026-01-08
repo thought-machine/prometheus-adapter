@@ -24,7 +24,7 @@ import (
 	"k8s.io/apimachinery/pkg/runtime/schema"
 	"k8s.io/apimachinery/pkg/selection"
 
-	prom "sigs.k8s.io/prometheus-adapter/pkg/client"
+	prom "github.com/thought-machine/prometheus-adapter/pkg/client"
 
 	pmodel "github.com/prometheus/common/model"
 )
