@@ -235,7 +235,7 @@ func (h *queryClient) QueryRange(ctx context.Context, r Range, query Selector) (
 // when present
 func timeoutFromContext(ctx context.Context) (time.Duration, bool) {
 	if deadline, hasDeadline := ctx.Deadline(); hasDeadline {
-		return time.Since(deadline), true
+		return time.Until(deadline), true
 	}
 
 	return time.Duration(0), false
