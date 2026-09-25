@@ -1,15 +1,14 @@
-REGISTRY?=gcr.io/k8s-staging-prometheus-adapter
 IMAGE=prometheus-adapter
 ARCH?=$(shell go env GOARCH)
 ALL_ARCH=amd64 arm arm64 ppc64le s390x
-GOPATH:=$(shell go env GOPATH)
+GOPATH := $(shell echo $(GOPATH) | cut -d: -f1)
 
 VERSION=$(shell cat VERSION)
 TAG_PREFIX=v
 TAG?=$(TAG_PREFIX)$(VERSION)
 
-GO_VERSION?=1.22.5
-GOLANGCI_VERSION?=1.56.2
+GO_VERSION?=$(shell grep -E '^go [0-9.]+' go.mod | awk '{print $$2}')
+GOLANGCI_VERSION?=2.8.0
 
 .PHONY: all
 all: prometheus-adapter
@@ -24,7 +23,7 @@ prometheus-adapter: $(SRC_DEPS)
 
 .PHONY: container
 container:
-	docker build -t $(REGISTRY)/$(IMAGE)-$(ARCH):$(TAG) --build-arg ARCH=$(ARCH) --build-arg GO_VERSION=$(GO_VERSION) .
+	docker build -t $(IMAGE)-$(ARCH):$(TAG) --build-arg ARCH=$(ARCH) --build-arg GO_VERSION=$(GO_VERSION) .
 
 # Container push
 # --------------
@@ -33,20 +32,7 @@ PUSH_ARCH_TARGETS=$(addprefix push-,$(ALL_ARCH))
 
 .PHONY: push
 push: container
-	docker push $(REGISTRY)/$(IMAGE)-$(ARCH):$(TAG)
-
-push-all: $(PUSH_ARCH_TARGETS) push-multi-arch;
-
-.PHONY: $(PUSH_ARCH_TARGETS)
-$(PUSH_ARCH_TARGETS): push-%:
-	ARCH=$* $(MAKE) push
-
-.PHONY: push-multi-arch
-push-multi-arch: export DOCKER_CLI_EXPERIMENTAL = enabled
-push-multi-arch:
-	docker manifest create --amend $(REGISTRY)/$(IMAGE):$(TAG) $(shell echo $(ALL_ARCH) | sed -e "s~[^ ]*~$(REGISTRY)/$(IMAGE)\-&:$(TAG)~g")
-	@for arch in $(ALL_ARCH); do docker manifest annotate --arch $${arch} $(REGISTRY)/$(IMAGE):$(TAG) $(REGISTRY)/$(IMAGE)-$${arch}:$(TAG); done
-	docker manifest push --purge $(REGISTRY)/$(IMAGE):$(TAG)
+	docker push $(IMAGE)-$(ARCH):$(TAG)
 
 # Test
 # ----
@@ -72,7 +58,7 @@ update: update-lint update-generated
 # Format and lint
 # ---------------
 
-HAS_GOLANGCI_VERSION:=$(shell $(GOPATH)/bin/golangci-lint version --short)
+HAS_GOLANGCI_VERSION:=$(shell $(GOPATH)/bin/golangci-lint version)
 .PHONY: golangci
 golangci:
 ifneq ($(HAS_GOLANGCI_VERSION), $(GOLANGCI_VERSION))
