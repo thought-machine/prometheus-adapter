@@ -20,7 +20,7 @@ require (
 	k8s.io/klog/v2 v2.140.0
 	k8s.io/kube-openapi v0.0.0-20260911184034-7970a1e230da
 	k8s.io/metrics v0.37.1
-	sigs.k8s.io/custom-metrics-apiserver v1.36.0
+	sigs.k8s.io/custom-metrics-apiserver v1.36.1-0.20260922020411-ed62571de233
 	sigs.k8s.io/metrics-server v0.9.0
 )
 
@@ -105,7 +105,7 @@ require (
 	golang.org/x/tools v0.49.0 // indirect
 	google.golang.org/genproto/googleapis/api v0.0.0-20260803160001-6ac0973c030d // indirect
 	google.golang.org/genproto/googleapis/rpc v0.0.0-20260803160001-6ac0973c030d // indirect
-	google.golang.org/grpc v1.83.0 // indirect
+	google.golang.org/grpc v1.83.2 // indirect
 	google.golang.org/protobuf v1.36.12 // indirect
 	gopkg.in/evanphx/json-patch.v4 v4.13.0 // indirect
 	gopkg.in/inf.v0 v0.9.1 // indirect
