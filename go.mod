@@ -1,6 +1,6 @@
 module github.com/thought-machine/prometheus-adapter
 
-go 1.26.4
+go 1.27.0
 
 require (
 	github.com/onsi/ginkgo v1.16.5
@@ -12,14 +12,14 @@ require (
 	github.com/spf13/cobra v1.10.2
 	github.com/stretchr/testify v1.11.1
 	gopkg.in/yaml.v2 v2.4.0
-	k8s.io/api v0.36.3
-	k8s.io/apimachinery v0.36.3
-	k8s.io/apiserver v0.36.3
-	k8s.io/client-go v0.36.3
-	k8s.io/component-base v0.36.3
+	k8s.io/api v0.37.1
+	k8s.io/apimachinery v0.37.1
+	k8s.io/apiserver v0.37.1
+	k8s.io/client-go v0.37.1
+	k8s.io/component-base v0.37.1
 	k8s.io/klog/v2 v2.140.0
-	k8s.io/kube-openapi v0.0.0-20260721132016-d427ff9ee9ad
-	k8s.io/metrics v0.36.3
+	k8s.io/kube-openapi v0.0.0-20260911184034-7970a1e230da
+	k8s.io/metrics v0.37.1
 	sigs.k8s.io/custom-metrics-apiserver v1.36.0
 	sigs.k8s.io/metrics-server v0.9.0
 )
@@ -113,14 +113,15 @@ require (
 	gopkg.in/tomb.v1 v1.0.0-20141024135613-dd632973f1e7 // indirect
 	gopkg.in/yaml.v3 v3.0.1 // indirect
 	k8s.io/apiextensions-apiserver v0.36.3 // indirect
-	k8s.io/gengo/v2 v2.0.0-20251215205346-5ee0d033ba5b // indirect
-	k8s.io/kms v0.36.3 // indirect
-	k8s.io/streaming v0.36.3 // indirect
+	k8s.io/gengo/v2 v2.0.0-20260408192533-25e2208e0dc3 // indirect
+	k8s.io/kms v0.37.1 // indirect
+	k8s.io/streaming v0.37.1 // indirect
 	k8s.io/utils v0.0.0-20260707023825-cf1189d6abe3 // indirect
 	sigs.k8s.io/apiserver-network-proxy/konnectivity-client v0.36.0 // indirect
 	sigs.k8s.io/controller-runtime v0.24.1 // indirect
 	sigs.k8s.io/json v0.0.0-20250730193827-2d320260d730 // indirect
 	sigs.k8s.io/randfill v1.0.0 // indirect
 	sigs.k8s.io/structured-merge-diff/v6 v6.4.2 // indirect
+	sigs.k8s.io/structured-merge-diff/v7 v7.0.0 // indirect
 	sigs.k8s.io/yaml v1.6.0 // indirect
 )
